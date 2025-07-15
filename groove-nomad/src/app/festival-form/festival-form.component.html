@@ -1,0 +1,105 @@
+<form [formGroup]="festivalForm" class="festival-form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Nom du festival</mat-label>
+    <input matInput formControlName="nom" placeholder="Nom du festival" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Dates</mat-label>
+    <input matInput formControlName="dates" placeholder="Ex: 14-17 juillet 2025" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Genre musical</mat-label>
+    <input matInput formControlName="genre" placeholder="Rock, Jazz, Electro..." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Ville</mat-label>
+    <input matInput formControlName="ville" placeholder="Paris, Berlin..." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Pays</mat-label>
+    <input matInput formControlName="pays" placeholder="France, Allemagne..." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Lieu (Venue)</mat-label>
+    <input matInput formControlName="lieu" placeholder="Nom du lieu ou de la salle" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Capacité</mat-label>
+    <input matInput type="number" formControlName="capacite" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Site Web</mat-label>
+    <input matInput formControlName="siteWeb" placeholder="https://..." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Prix du billet (EUR)</mat-label>
+    <input matInput type="number" formControlName="prixBillet" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Hébergement</mat-label>
+    <input matInput formControlName="hebergement" placeholder="Camping, Hôtel, etc." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Aéroport le plus proche</mat-label>
+    <input matInput formControlName="aeroportProche" placeholder="CDG, Orly, etc." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Ambiance</mat-label>
+    <mat-select formControlName="ambiance">
+      <mat-option value="festive">Festive</mat-option>
+      <mat-option value="familiale">Familiale</mat-option>
+      <mat-option value="intimiste">Intimiste</mat-option>
+      <mat-option value="autre">Autre</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Remarques</mat-label>
+    <textarea matInput formControlName="remarques" placeholder="Infos additionnelles..."></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Type de billet</mat-label>
+    <input matInput formControlName="typeBillet" placeholder="Standard, VIP, etc." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Devise</mat-label>
+    <input matInput formControlName="devise" placeholder="EUR, USD, etc." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Prix palier 1</mat-label>
+    <input matInput type="number" formControlName="prixPalier1" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Prix palier 2</mat-label>
+    <input matInput type="number" formControlName="prixPalier2" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Prix palier 3</mat-label>
+    <input matInput type="number" formControlName="prixPalier3" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Date de création du festival</mat-label>
+    <input matInput type="date" formControlName="dateCreation" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">
+    Ajouter le festival
+  </button>
+</form>
