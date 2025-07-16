@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent {
   currentStep = 1;
-  maxSteps = 5;
+  maxSteps = 6;
 
   registerForm: FormGroup;
 

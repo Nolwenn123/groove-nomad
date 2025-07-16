@@ -37,5 +37,10 @@
     <input type="text" formControlName="location" placeholder="Ville ou pays" />
   </div>
 
+  <div *ngIf="currentStep === 6">
+    <h2>Super !</h2>
+    <label>Inscription réussie ! Renseigne tes préférences pour des recommandations IA personnalisées.</label>
+  </div>
+
   <button (click)="currentStep < maxSteps ? nextStep() : onSubmit()">Valider</button>
 </div>
