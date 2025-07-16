@@ -21,7 +21,7 @@ import { MatStepperModule } from '@angular/material/stepper';
     AppComponent,
     FestivalFormComponent,
     RegisterComponent
-  ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
