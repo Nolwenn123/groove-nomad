@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './pages/register/register.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { NavbarComponent } from './tools/navbar/navbar.component';
+import { ReservationComponent } from './pages/reservation/reservation.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { NavbarComponent } from './tools/navbar/navbar.component';
     AppComponent,
     FestivalFormComponent,
     RegisterComponent,
-    NavbarComponent
+    NavbarComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
