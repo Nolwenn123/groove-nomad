@@ -3,8 +3,9 @@
   gap: 1rem;
   color: white;
   margin: 2vw;
-      flex-direction: column;
-
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
 }
 
   input {
@@ -18,21 +19,33 @@
   }
 
   button {
-    position: fixed;
-    padding: 1rem;
-    background: teal;
-    color: white;
-    border: none;
-    border-radius: 80px;
-    bottom: 30px;
-    width: 95%;
-    font-weight: 600;
-    font-style: normal;
+    font-size: 16px;
+   position: fixed;
+  padding: 1rem;
+  width: 95%;
+  bottom: 40px;
+
+  background: rgba(0, 128, 128, 0.2);
+  color: white;
+  font-weight: 600;
+  font-style: normal;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 80px;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
   }
 
 h2 {
-    font-size: 20px;
+    border-bottom: 2px dashed transparent;
+  border-image: repeating-linear-gradient(to right, white 0, white 10px, transparent 10px, transparent 20px);
+  border-image-slice: 1;
+  color: #D6F5EF;
     font-size: 48px;
     font-weight: 600;
     font-style: normal;

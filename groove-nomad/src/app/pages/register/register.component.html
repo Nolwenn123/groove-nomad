@@ -1,4 +1,10 @@
-<div class="register-container">
+<div class="register-container" 
+    [ngStyle]="{
+        'background-image': 'url(assets/images/bonhomme' + currentStep + '.png)',
+        'background-size': '65%',
+        'background-repeat': 'no-repeat',
+        'background-position': 'bottom right'
+  }">
   <button *ngIf="currentStep > 1" (click)="previousStep()">←</button>
   
   <div *ngIf="currentStep === 1">
