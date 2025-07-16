@@ -14,7 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './pages/register/register.component';
 import { MatStepperModule } from '@angular/material/stepper';
-import { ReservationComponent } from './reservation/reservation.component';
+import { ReservationComponent } from './pages/reservation/reservation.component';
 
 
 @NgModule({
