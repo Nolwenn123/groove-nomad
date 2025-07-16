@@ -1,0 +1,117 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px;
+  
+  /* Effet de transparence et flou */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  /* Bordure subtile */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  bottom: 40px;
+  border-radius:80px;
+  margin: 16px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+/* Bouton de recherche/réserver */
+.search-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Boutons menu et profil */
+.menu-btn,
+.profile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 48px;
+  height: 48px;
+  
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover,
+.profile-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Icônes */
+.icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* Rend les icônes blanches */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+  }
+  
+  .search-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .search-btn span {
+    display: none; /* Cache le texte sur mobile */
+  }
+  
+  .menu-btn,
+  .profile-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
