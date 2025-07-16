@@ -1,0 +1,35 @@
+<div class="register-container">
+  <button *ngIf="currentStep > 1" (click)="previousStep()">←</button>
+  
+  <div *ngIf="currentStep === 1">
+    <h2>Inscription</h2>
+    <label>Quel est ton mail ?</label>
+    <input type="email" formControlName="email" placeholder="Adresse mail" />
+  </div>
+
+  <div *ngIf="currentStep === 2">
+    <h2>2/5</h2>
+    <label>Quel est ton numéro ?</label>
+    <input type="tel" formControlName="phone" placeholder="Numéro de téléphone" />
+  </div>
+
+  <div *ngIf="currentStep === 3">
+    <h2>3/5</h2>
+    <label>Comment t’appelles-tu ?</label>
+    <input type="text" formControlName="name" placeholder="Ton prénom et nom" />
+  </div>
+
+  <div *ngIf="currentStep === 4">
+    <h2>4/5</h2>
+    <label>Quelle est ta date de naissance ?</label>
+    <input type="date" formControlName="birthDate" />
+  </div>
+
+  <div *ngIf="currentStep === 5">
+    <h2>5/5</h2>
+    <label>Tu viens d'où ?</label>
+    <input type="text" formControlName="location" placeholder="Ville ou pays" />
+  </div>
+
+  <button (click)="currentStep < maxSteps ? nextStep() : onSubmit()">Valider</button>
+</div>

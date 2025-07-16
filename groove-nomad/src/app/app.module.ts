@@ -12,12 +12,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './pages/register/register.component';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FestivalFormComponent
+    FestivalFormComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
-
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

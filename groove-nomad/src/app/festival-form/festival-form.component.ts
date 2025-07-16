@@ -18,19 +18,19 @@ export class FestivalFormComponent {
       ville: [''],
       pays: [''],
       lieu: [''],
-      capacite: [null],
+      capacite: [''],
       siteWeb: [''],
-      prixBillet: [null],
+      prixBillet: [''],
       hebergement: [''],
       aeroportProche: [''],
       ambiance: [''],
       remarques: [''],
       typeBillet: [''],
       devise: ['EUR'],
-      prixPalier1: [null],
-      prixPalier2: [null],
-      prixPalier3: [null],
-      dateCreation: [null],
+      prixPalier1: [''],
+      prixPalier2: [''],
+      prixPalier3: [''],
+      dateCreation: [''],
     });
   }
 
@@ -40,7 +40,7 @@ export class FestivalFormComponent {
       
       const makeWebhookUrl = 'https://hook.eu2.make.com/f3splxnnffsnz390mo4knli9v8rvoyli';
 
-      this.http.post(makeWebhookUrl, formData).subscribe({
+      this.http.post(makeWebhookUrl, formData, { responseType: 'text' }).subscribe({
         next: () => {
           alert('Festival ajouté avec succès !');
           this.festivalForm.reset();
@@ -53,5 +53,6 @@ export class FestivalFormComponent {
     } else {
       alert('Veuillez remplir correctement le formulaire avant de l’envoyer.');
     }
+    console.log('FormData envoyé :', this.festivalForm.value);
   }
 }
